@@ -5,4 +5,4 @@ for _ in range(n):
     main_array = []
     for x in s:
         main_array.append([x*(s.count(x))])
-    print(s)
+    print(s) 

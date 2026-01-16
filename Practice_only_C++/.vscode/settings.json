@@ -1,0 +1,5 @@
+{
+    "chat.extensionUnification.enabled": false,
+    "C_Cpp.copilotHover": "disabled",
+    "github.copilot.chat.agent.currentEditorContext.enabled": false
+}
