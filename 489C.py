@@ -11,4 +11,7 @@ else:
     while a > 1:
         s += '0'  
         a -= 1
-    print(int(s[::-1]),s)
+    if s[-1] != "0":
+        print(int(s[::-1]),s)
+    else:
+        print(s,s)

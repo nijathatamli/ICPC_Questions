@@ -1,0 +1,17 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define str string
+int main() {
+    ios_base::sync_with_stdio(false), cin.tie(nullptr);
+    int t;
+    cin >> t;
+    while(t--) {
+        int n;cin >> n;
+        str s[n], t;
+        for(int i = 0; i < n; i++)cin >> s[i];
+        for(int i = 0; i < n; i++)
+            t = min(t+s[i], s[i]+t);
+        cout << t << '\n';
+    }
+    return 0;
+}
