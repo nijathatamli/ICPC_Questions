@@ -4,25 +4,18 @@ using namespace std;
 void solve()
 {
     ll y, x; cin >> y >> x;
-    ll ans = 0;
     if (x == y)
     {
-        cout << (x * y) - (x - 1); return;
+        cout << (x * y) - (x - 1) << endl; return;
     }
     else {
         ll mx = max(x,y);
-        ll pow_mx = pow(mx, 2);
-        if (x > y){
-            if (x % 2) ans += x - y;
-            else ans -= x - y;  
-        }
-        else{
-            if (x % 2) ans -= y - x;
-            else ans += y - x;
-        }
-    }
-    cout << ans;
+        ll pow_mx = mx * mx;
+        if (mx % 2) cout << (pow_mx - (mx - 1)) + abs(x - y) << endl;
+        else cout << (pow_mx - (mx - 1)) - abs(x - y) << endl;
+        }    
 }
+
 int main() {
     ios::sync_with_stdio(false);
     cin.tie(0);
