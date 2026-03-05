@@ -15,21 +15,10 @@ int main() {
     int i = 0, j = 0, all = 0;
     while (i < a.size() || j < b.size())
     {
-        if (a[i] < b[j])
-        {
-            c[all] = a[i];
-            if (i != a.size())
-            {
-                i++;
-            }
-        }
-        else {
-            c[all] = b[j];
-            if (j != b.size()){ 
-                j++;
-            }
-        }
-        all++;
+        if (j == m || (i < n && a[i] < b[j])) 
+            c[all++] = a[i++];
+        else  
+            c[all++] = b[j++];
     }
     for (auto x : c) cout << x << ' ';
     return 0;
